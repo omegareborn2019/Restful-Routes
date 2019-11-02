@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<h1>Cars List Goes Here</h1>
+
+<div>
+  <a href="/">Home Page</a>
+</div>
+<div>
+  <a href="/cars/new">Manage Cars List</a>
+</div>
+
+<div class="row">
+  <% for (var car of cars){ %>
+    <div class="card" style="width: 18rem;">
+      <img src="<%= car.image %>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text"><%= car.name.toUpperCase() %></p>
+        <p class="card-text"><%= car.comment %></p>
+        <span>
+          <a href="/cars/<%= car.id %>" class="btn btn-primary">More Info</a>
+        </span>
+      </div>
+    </div>
+  <% } %>
+</div>

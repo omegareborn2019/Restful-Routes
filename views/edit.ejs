@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<h1>Edit Page</h1>
+
+<form class="form-group" action="/cars/<%= editCar.id %>?_method=PUT" method="POST">
+  <input type="text" name="name" value="<%= editCar.name %>">
+  <input type="text" name="image" value="<%= editCar.image %>">
+  <input type="text" name="comment" value="<%= editCar.comment %>">
+  <button>Submit</button>
+</form>
+
+<a href="/cars">Back</a>
